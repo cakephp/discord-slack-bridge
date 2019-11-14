@@ -11,6 +11,8 @@ ADD https://github.com/krallin/tini/releases/download/v0.18.0/tini /bin/tini
 ADD https://github.com/42wim/matterbridge/releases/download/v1.16.1/matterbridge-1.16.1-linux-arm64 /bin/matterbridge
 RUN chmod +x /bin/matterbridge /bin/sigil /bin/tini
 
+RUN apt-get install -y file
+
 COPY Procfile run /app/
 COPY matterbridge.toml.sigil /app/matterbridge.toml.sigil
 
