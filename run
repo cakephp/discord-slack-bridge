@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+main() {
+  sigil -f matterbridge.toml.sigil > /app/matterbridge.toml
+  /bin/matterbridge -conf /app/matterbridge.toml
+}
+
+main "$@"

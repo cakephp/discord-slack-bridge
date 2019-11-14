@@ -1,0 +1,27 @@
+[slack]
+[slack.internal]
+Token                  = "{{ var "SLACK_TOKEN" }}"
+PrefixMessagesWithNick = true
+
+[discord]
+[discord.internal]
+Token  = "{{ var "DISCORD_TOKEN" }}"
+Server = "{{ var "DISCORD_SERVER" }}"
+
+[general]
+RemoteNickFormat="<{NICK}> "
+
+[[gateway]]
+    name   = "internal"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.internal"
+    channel = "{{ var "CHANNEL" }}"
+
+    [gateway.inout.options]
+    WebhookURL = "{{ var "DISCORD_WEBHOOK_URL" }}"
+
+    [[gateway.inout]]
+    account = "slack.internal"
+    channel = "{{ var "CHANNEL" }}"
