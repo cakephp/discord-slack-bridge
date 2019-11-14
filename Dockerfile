@@ -16,7 +16,7 @@ RUN chmod +x /bin/matterbridge /bin/tini
 RUN curl -L "https://github.com/gliderlabs/sigil/releases/download/v${SIGIL_VERSION}/sigil_${SIGIL_VERSION}_$(uname -sm|tr \  _).tgz" \
     | tar -zxC /bin
 
-COPY run /app/run
+COPY Procfile run /app/
 COPY matterbridge.toml.sigil /app/matterbridge.toml.sigil
 
 ENTRYPOINT ["/bin/tini", "--"]
