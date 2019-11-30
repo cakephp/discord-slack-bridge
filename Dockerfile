@@ -8,7 +8,7 @@ RUN apt update && apt install -y curl file && \
 
 RUN curl -L "https://github.com/gliderlabs/sigil/releases/download/v0.4.0/sigil_0.4.0_Linux_x86_64.tgz" | tar -zxC /bin
 ADD https://github.com/krallin/tini/releases/download/v0.18.0/tini /bin/tini
-ADD https://github.com/42wim/matterbridge/releases/download/v1.16.1/matterbridge-1.16.1-linux-64bit /bin/matterbridge
+ADD https://github.com/42wim/matterbridge/releases/download/v1.16.2/matterbridge-1.16.2-linux-64bit /bin/matterbridge
 RUN chmod +x /bin/matterbridge /bin/sigil /bin/tini
 
 COPY Procfile run /app/
