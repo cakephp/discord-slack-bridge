@@ -1,7 +1,7 @@
 [slack]
 [slack.internal]
 Token                  = "{{ var "SLACK_TOKEN" }}"
-PrefixMessagesWithNick = true
+PrefixMessagesWithNick = false
 RemoteNickFormat       = "@{NICK}"
 
 [discord]
