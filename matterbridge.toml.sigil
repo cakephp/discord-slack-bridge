@@ -1,11 +1,11 @@
 [slack]
-[slack.internal]
+[slack.dev]
 Token                  = "{{ var "SLACK_TOKEN" }}"
 PrefixMessagesWithNick = false
 RemoteNickFormat       = "{NICK}"
 
 [discord]
-[discord.internal]
+[discord.dev]
 Token  = "{{ var "DISCORD_TOKEN" }}"
 Server = "{{ var "DISCORD_SERVER" }}"
 
@@ -13,16 +13,16 @@ Server = "{{ var "DISCORD_SERVER" }}"
 RemoteNickFormat="<{NICK}> "
 
 [[gateway]]
-    name   = "internal"
+    name   = "dev"
     enable = true
 
     [[gateway.inout]]
-    account = "discord.internal"
+    account = "discord.dev"
     channel = "{{ var "CHANNEL" }}"
 
     [gateway.inout.options]
     WebhookURL = "{{ var "DISCORD_WEBHOOK_URL" }}"
 
     [[gateway.inout]]
-    account = "slack.internal"
+    account = "slack.dev"
     channel = "{{ var "CHANNEL" }}"
