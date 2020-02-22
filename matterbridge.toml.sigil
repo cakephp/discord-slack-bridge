@@ -9,6 +9,12 @@ RemoteNickFormat       = "{NICK}"
 Token  = "{{ var "DISCORD_TOKEN" }}"
 Server = "{{ var "DISCORD_SERVER" }}"
 
+[rocketchat]
+[rocketchat.dev]
+Server   = "{{ var "ROCKETCHAT_SERVER" }}"
+Login    = "{{ var "ROCKETCHAT_LOGIN" }}"
+Password = "{{ var "ROCKETCHAT_PASSWORD" }}"
+
 [general]
 RemoteNickFormat="<{NICK}> "
 
@@ -26,3 +32,22 @@ RemoteNickFormat="<{NICK}> "
     [[gateway.inout]]
     account = "slack.dev"
     channel = "{{ var "CHANNEL" }}"
+
+[[gateway]]
+    name   = "internal"
+    enable = true
+
+    [[gateway.inout]]
+    account = "rocketchat.dev"
+    channel = "#cakephp"
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "internal"
+
+    [gateway.inout.options]
+    WebhookURL = "{{ var "DISCORD_WEBHOOK_URL" }}"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "internal"
