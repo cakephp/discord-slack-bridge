@@ -14,6 +14,7 @@ Server = "{{ var "DISCORD_SERVER" }}"
 Server   = "{{ var "ROCKETCHAT_SERVER" }}"
 Login    = "{{ var "ROCKETCHAT_LOGIN" }}"
 Password = "{{ var "ROCKETCHAT_PASSWORD" }}"
+IconURL  = "{{ var "ROCKETCHAT_SERVER" }}/avatar/{NICK}"
 
 [general]
 RemoteNickFormat="<{NICK}> "
