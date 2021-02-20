@@ -11,9 +11,6 @@ An ill-named internal discord &lt;=> rocketchat &lt;=> slack chat bridge
   - discord (#internal): enabled
   - slack (#internal): enabled
   - rocketchat (#cakephp): enabled (cakedc only)
-- #support: a mirror for the official support channel
-  - discord (#support): enabled
-  - slack (#support): enabled
 
 ## Adding a new bridge
 
