@@ -51,3 +51,18 @@ RemoteNickFormat="<{NICK}> "
     [[gateway.inout]]
     account = "slack.dev"
     channel = "internal"
+
+[[gateway]]
+    name   = "support"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "support"
+
+    [gateway.inout.options]
+    WebhookURL = "{{ var "DISCORD_SUPPORT_WEBHOOK_URL" }}"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "support"
