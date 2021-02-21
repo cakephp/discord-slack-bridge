@@ -6,8 +6,9 @@ RemoteNickFormat       = "{NICK}"
 
 [discord]
 [discord.dev]
-Token  = "{{ var "DISCORD_TOKEN" }}"
-Server = "{{ var "DISCORD_SERVER" }}"
+Token        = "{{ var "DISCORD_TOKEN" }}"
+Server       = "{{ var "DISCORD_SERVER" }}"
+AutoWebhooks = true
 
 [rocketchat]
 [rocketchat.dev]
@@ -26,9 +27,6 @@ RemoteNickFormat="<{NICK}> "
     account = "discord.dev"
     channel = "{{ var "CHANNEL" }}"
 
-    [gateway.inout.options]
-    WebhookURL = "{{ var "DISCORD_WEBHOOK_URL" }}"
-
     [[gateway.inout]]
     account = "slack.dev"
     channel = "{{ var "CHANNEL" }}"
@@ -44,9 +42,6 @@ RemoteNickFormat="<{NICK}> "
     [[gateway.inout]]
     account = "discord.dev"
     channel = "internal"
-
-    [gateway.inout.options]
-    WebhookURL = "{{ var "DISCORD_INTERNAL_WEBHOOK_URL" }}"
 
     [[gateway.inout]]
     account = "slack.dev"
