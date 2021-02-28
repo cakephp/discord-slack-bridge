@@ -58,3 +58,15 @@ RemoteNickFormat="<{NICK}> "
     [[gateway.inout]]
     account = "slack.dev"
     channel = "support"
+
+[[gateway]]
+    name   = "phinx"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "phinx-dev"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "phinx-dev"
