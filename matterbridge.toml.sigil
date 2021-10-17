@@ -82,3 +82,75 @@ RemoteNickFormat="<{NICK}> "
     [[gateway.inout]]
     account = "slack.dev"
     channel = "cakefest"    
+
+[[gateway]]
+    name   = "danish"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "danish"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "denmark"    
+
+[[gateway]]
+    name   = "french"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "french"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "french"    
+
+[[gateway]]
+    name   = "german"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "german"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "german"    
+
+[[gateway]]
+    name   = "dutch"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "dutch"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "netherlands"    
+
+[[gateway]]
+    name   = "portuguese"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "portuguese"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "portuguese"    
+
+[[gateway]]
+    name   = "spanish"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "spanish"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "spanish"    
