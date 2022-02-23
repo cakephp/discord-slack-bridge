@@ -84,6 +84,18 @@ RemoteNickFormat="<{NICK}> "
     channel = "cakefest"    
 
 [[gateway]]
+    name   = "friendsofcake"
+    enable = true
+
+    [[gateway.inout]]
+    account = "discord.dev"
+    channel = "friendsofcake"
+
+    [[gateway.inout]]
+    account = "slack.dev"
+    channel = "friendsofcake"    
+
+[[gateway]]
     name   = "danish"
     enable = true
 
