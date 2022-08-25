@@ -1,20 +1,23 @@
 [slack]
-[slack.dev]
-Token                  = "{{ var "SLACK_TOKEN" }}"
-PrefixMessagesWithNick = false
-RemoteNickFormat       = "{NICK}"
+    [slack.dev]
+    PrefixMessagesWithNick = false
+    PreserveThreading      = true
+    RemoteNickFormat       = "{NICK}"
+    Token                  = "{{ var "SLACK_TOKEN" }}"
 
 [discord]
-[discord.dev]
-Token        = "{{ var "DISCORD_TOKEN" }}"
-Server       = "{{ var "DISCORD_SERVER" }}"
-AutoWebhooks = true
+    [discord.dev]
+    AutoWebhooks      = true
+    PreserveThreading = true
+    RemoteNickFormat  = "{NICK}"
+    Server            = "{{ var "DISCORD_SERVER" }}"
+    Token             = "{{ var "DISCORD_TOKEN" }}"
 
 [rocketchat]
-[rocketchat.dev]
-Server   = "{{ var "ROCKETCHAT_SERVER" }}"
-Login    = "{{ var "ROCKETCHAT_LOGIN" }}"
-Password = "{{ var "ROCKETCHAT_PASSWORD" }}"
+    [rocketchat.dev]
+    Server   = "{{ var "ROCKETCHAT_SERVER" }}"
+    Login    = "{{ var "ROCKETCHAT_LOGIN" }}"
+    Password = "{{ var "ROCKETCHAT_PASSWORD" }}"
 
 [general]
 RemoteNickFormat="<{NICK}> "
@@ -70,7 +73,7 @@ RemoteNickFormat="<{NICK}> "
     [[gateway.inout]]
     account = "slack.dev"
     channel = "phinx-dev"
-    
+
 [[gateway]]
     name   = "cakefest"
     enable = true
@@ -81,7 +84,7 @@ RemoteNickFormat="<{NICK}> "
 
     [[gateway.inout]]
     account = "slack.dev"
-    channel = "cakefest"    
+    channel = "cakefest"
 
 [[gateway]]
     name   = "danish"
@@ -93,7 +96,7 @@ RemoteNickFormat="<{NICK}> "
 
     [[gateway.inout]]
     account = "slack.dev"
-    channel = "denmark"    
+    channel = "denmark"
 
 [[gateway]]
     name   = "french"
@@ -105,7 +108,7 @@ RemoteNickFormat="<{NICK}> "
 
     [[gateway.inout]]
     account = "slack.dev"
-    channel = "french"    
+    channel = "french"
 
 [[gateway]]
     name   = "german"
@@ -117,7 +120,7 @@ RemoteNickFormat="<{NICK}> "
 
     [[gateway.inout]]
     account = "slack.dev"
-    channel = "german"    
+    channel = "german"
 
 [[gateway]]
     name   = "dutch"
@@ -129,7 +132,7 @@ RemoteNickFormat="<{NICK}> "
 
     [[gateway.inout]]
     account = "slack.dev"
-    channel = "netherlands"    
+    channel = "netherlands"
 
 [[gateway]]
     name   = "portuguese"
@@ -141,7 +144,7 @@ RemoteNickFormat="<{NICK}> "
 
     [[gateway.inout]]
     account = "slack.dev"
-    channel = "portuguese"    
+    channel = "portuguese"
 
 [[gateway]]
     name   = "spanish"
@@ -153,4 +156,4 @@ RemoteNickFormat="<{NICK}> "
 
     [[gateway.inout]]
     account = "slack.dev"
-    channel = "spanish"    
+    channel = "spanish"
