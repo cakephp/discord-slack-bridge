@@ -2,14 +2,12 @@
     [slack.dev]
     PrefixMessagesWithNick = false
     PreserveThreading      = true
-    RemoteNickFormat       = "{NICK}"
     Token                  = "{{ var "SLACK_TOKEN" }}"
 
 [discord]
     [discord.dev]
     AutoWebhooks      = true
     PreserveThreading = true
-    RemoteNickFormat  = "{NICK}"
     Server            = "{{ var "DISCORD_SERVER" }}"
     Token             = "{{ var "DISCORD_TOKEN" }}"
 
